@@ -1,0 +1,184 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+body {
+    background-color: white;
+}
+
+form {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translate(-15%,-50%);
+    width: 60%;
+    max-width: 500px;
+    height: max-content;
+    max-height: max-content;
+    background-color: white;
+    border: 1px solid #efefef;
+    border-radius: 20px;
+    padding: 50px 20px;
+    box-shadow: 0px 10px 15px #ccc;
+    z-index: 2;
+}
+
+@media screen and (max-height: 800px) {
+    form {
+        top: 5px;
+        left: 50%;
+        width: 100%;
+        min-width: 280px;
+        max-width: 540px;
+        height: max-content;
+        transform: translate(-50%,5px);
+    }
+}
+
+@media screen and (max-height: 800px) {
+    body {
+        background-color: #6B5CFF;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .image-mobile-girl {
+        display: none;
+    }
+}
+  
+@media screen and (max-width: 540px) {
+    form {
+        top: 0%;
+        overflow-x: hidden;
+        left: 0%;
+        width: 100%;
+        min-width: 280px;
+        max-width: 540px;
+        height: 100%;
+        transform: translate(0%,0%);
+        border-radius: 0px;
+    }
+}
+
+.image-profile {
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%,0);
+    width: 100px;
+}
+
+.image-mobile-girl {
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    transform: translate(-10%, 50%);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1;
+}
+
+form h1 {
+    margin: 40px 0px;
+    text-align: center;
+    word-break: break-all;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    position:relative;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size:16px;
+    margin: 10px 0;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+    background-color: #efefef;
+    border-bottom: 2px solid #6B5CFF;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #6B5CFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px 0px;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4f44bd;
+}
+
+.background-middle {
+    position: absolute;
+    top: 0;
+    background-color: #6B5CFF;
+    height: 50%;
+    width: 100%;
+}
+
+.forgot-password {
+    display:inline-flex;
+    float: right;
+    color: #808080;
+}
+
+.footer-rm-fp {
+    margin: 20px 0px;
+}
+
+form h4 {
+    margin: 30px 0px;
+    text-align: center;
+}
+
+.login-google {
+    background-color: #dd4b39;
+}
+.login-facebook {
+    background-color: #3b5998;
+}
+.login-twitter {
+    background-color: #00acee;
+}
+
+.login-google, 
+.login-facebook, 
+.login-twitter {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 8px;
+    margin: 2px 0px;
+    text-decoration: none;
+}
+
+.login-google:hover, 
+.login-facebook:hover, 
+.login-twitter:hover {
+    opacity: 0.8;
+}
+
+.icons-social-media {
+    float: left;
+    width: 22px;
+    padding: 0px;
+}
