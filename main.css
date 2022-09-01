@@ -1,7 +1,6 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow-x: hidden;
-    font-weight: bolder;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,10 +8,62 @@
 }
 
 body {
-    background-color: white;
+    background-color: black;
+    font-size: 16px;
 }
 
-form {
+header {
+    background-color: #333333;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    overflow-y: hidden;
+}
+
+input[type="search"] {
+    width: 50%;
+    max-width: 200px;
+    margin: 8px 0;
+    margin-right: 20px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    float: right;
+    outline: none;
+}
+
+input[type="search"]:focus {
+    border: 1px solid #0a84ff;
+}
+
+.icon-apple-tv {
+    width: 50px;
+    padding-top: 10px;
+}
+
+.btn-header-begin-session {
+    background-image:url(icons-user.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y:center;
+    width: 120px;
+    padding: 8px;
+    background-color: #0a84ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 8px 0px;
+    float: right;
+    text-align: right;
+}
+
+.background-form {
+    margin: 0;
     position: absolute;
     right: 15%;
     top: 50%;
@@ -21,73 +72,94 @@ form {
     max-width: 500px;
     height: max-content;
     max-height: max-content;
-    background-color: white;
-    border: 1px solid #efefef;
+    background-color: #333333;
+    border: none;
     border-radius: 20px;
-    padding: 50px 20px;
-    box-shadow: 0px 10px 15px #ccc;
+    padding: 0px 20px;
     z-index: 2;
 }
 
 @media screen and (max-height: 800px) {
-    form {
-        top: 5px;
+    .background-form {
+        top: 70px;
         left: 50%;
         width: 100%;
         min-width: 280px;
         max-width: 540px;
-        height: max-content;
-        transform: translate(-50%,5px);
+        transform: translate(-50%,50px);
     }
 }
 
 @media screen and (max-height: 800px) {
-    body {
-        background-color: #6B5CFF;
+    input[type="search"] {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        width: 100%;
+        min-width: 280px;
+        max-width: 540px;
+        transform: translate(-50%,50px);
     }
 }
 
 @media screen and (max-height: 800px) {
-    .image-mobile-girl {
+    form {
+       
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .icon-apple-tv {
+    margin-left: 45%;
+    transform: translate(45%, 0px);
+      
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .icon-apple-background {
         display: none;
     }
 }
   
 @media screen and (max-width: 540px) {
-    form {
-        top: 0%;
+    .background-form {
+        top: 25%;
         overflow-x: hidden;
         left: 0%;
         width: 100%;
         min-width: 280px;
         max-width: 540px;
         height: 100%;
-        transform: translate(0%,0%);
+        transform: translate(0%,25%);
         border-radius: 0px;
     }
 }
 
-.image-profile {
-    margin-left: 50%;
-    margin-right: 50%;
-    transform: translate(-50%,0);
-    width: 100px;
-}
-
-.image-mobile-girl {
+.icon-apple-background {
     position: absolute;
     bottom: 50%;
-    left: 10%;
-    transform: translate(-10%, 50%);
-    width: 80%;
-    max-width: 500px;
-    z-index: 1;
+    left: 20%;
+    transform: translate(-20%, 50%);
+    width: 60%;
+    max-width: 200px;
+}
+
+.icon-apple-form {
+    position: absolute;
+    bottom: 50%;
+    left: 20%;
+    transform: translate(-20%, 50%);
+    width: 60%;
+    max-width: 200px;
+    display: none;
 }
 
 form h1 {
     margin: 40px 0px;
     text-align: center;
-    word-break: break-all;
+    word-break: normal;
+    color: #f5f5f7;
 }
 
 form input[type="text"],
@@ -96,89 +168,60 @@ form input[type="password"] {
     width: 100%;
     padding: 10px;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0.5px solid black;
     outline: none;
-    font-size:16px;
-    margin: 10px 0;
+    font-size:14px;
+    margin: 0;
 }
 
-form input[type="text"]:focus,
-form input[type="password"]:focus {
-    background-color: #efefef;
-    border-bottom: 2px solid #6B5CFF;
+.input-usnm-pswd {
+    border: none;
+    border-radius: 10px;
 }
 
 form input[type="submit"] {
+    background-image:url(icons-user.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y:center;
     width: 100%;
     padding: 10px;
-    background-color: #6B5CFF;
+    background-color: #0a84ff;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     margin: 10px 0px;
-    font-size: 16px;
-}
-
-form input[type="submit"]:hover {
-    background-color: #4f44bd;
-}
-
-.background-middle {
-    position: absolute;
-    top: 0;
-    background-color: #6B5CFF;
-    height: 50%;
-    width: 100%;
 }
 
 .forgot-password {
-    display:inline-flex;
     float: right;
-    color: #808080;
+    color: #0a84ff;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
 
 .footer-rm-fp {
+    color: white;
+    font-size: 14px;
     margin: 20px 0px;
 }
 
 form h4 {
+    color: white;
     margin: 30px 0px;
     text-align: center;
 }
 
-.login-google {
-    background-color: #dd4b39;
-}
-.login-facebook {
-    background-color: #3b5998;
-}
-.login-twitter {
-    background-color: #00acee;
-}
-
-.login-google, 
-.login-facebook, 
-.login-twitter {
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    border: none;
-    border-radius: 2px;
+footer i {
     color: white;
-    padding: 8px;
-    margin: 2px 0px;
-    text-decoration: none;
-}
-
-.login-google:hover, 
-.login-facebook:hover, 
-.login-twitter:hover {
-    opacity: 0.8;
-}
-
-.icons-social-media {
-    float: left;
-    width: 22px;
-    padding: 0px;
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    text-align: center;
+    font-size: 11px;
 }
